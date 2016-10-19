@@ -1,0 +1,1199 @@
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (15.8ms)[0m  [1mCREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" text, "completed" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (4.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160201153423')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.176329"], ["updated_at", "2016-02-01 15:35:05.176329"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.179539"], ["updated_at", "2016-02-01 15:35:05.179539"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.181640"], ["updated_at", "2016-02-01 15:35:05.181640"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.188825"], ["updated_at", "2016-02-01 15:35:05.188825"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.190489"], ["updated_at", "2016-02-01 15:35:05.190489"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.191787"], ["updated_at", "2016-02-01 15:35:05.191787"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.196156"], ["updated_at", "2016-02-01 15:35:05.196156"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.197612"], ["updated_at", "2016-02-01 15:35:05.197612"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.198613"], ["updated_at", "2016-02-01 15:35:05.198613"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.201700"], ["updated_at", "2016-02-01 15:35:05.201700"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.202786"], ["updated_at", "2016-02-01 15:35:05.202786"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.203634"], ["updated_at", "2016-02-01 15:35:05.203634"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.207592"], ["updated_at", "2016-02-01 15:35:05.207592"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.208747"], ["updated_at", "2016-02-01 15:35:05.208747"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.209517"], ["updated_at", "2016-02-01 15:35:05.209517"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.212411"], ["updated_at", "2016-02-01 15:35:05.212411"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.213633"], ["updated_at", "2016-02-01 15:35:05.213633"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.214531"], ["updated_at", "2016-02-01 15:35:05.214531"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.217531"], ["updated_at", "2016-02-01 15:35:05.217531"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.218823"], ["updated_at", "2016-02-01 15:35:05.218823"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.219864"], ["updated_at", "2016-02-01 15:35:05.219864"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.223045"], ["updated_at", "2016-02-01 15:35:05.223045"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.224175"], ["updated_at", "2016-02-01 15:35:05.224175"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.224949"], ["updated_at", "2016-02-01 15:35:05.224949"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:35:05.227343"], ["updated_at", "2016-02-01 15:35:05.227343"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.228571"], ["updated_at", "2016-02-01 15:35:05.228571"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:35:05.229919"], ["updated_at", "2016-02-01 15:35:05.229919"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:36:27.047829"], ["updated_at", "2016-02-01 15:36:27.047829"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:36:27.054275"], ["updated_at", "2016-02-01 15:36:27.054275"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:36:27.060161"], ["updated_at", "2016-02-01 15:36:27.060161"]]
+  [1m[36m (15.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:37:52.459789"], ["updated_at", "2016-02-01 15:37:52.459789"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:37:52.461642"], ["updated_at", "2016-02-01 15:37:52.461642"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:37:52.462649"], ["updated_at", "2016-02-01 15:37:52.462649"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:37:52.470188"], ["updated_at", "2016-02-01 15:37:52.470188"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:37:52.471169"], ["updated_at", "2016-02-01 15:37:52.471169"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:37:52.472168"], ["updated_at", "2016-02-01 15:37:52.472168"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:38:56.915804"], ["updated_at", "2016-02-01 15:38:56.915804"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:38:56.917309"], ["updated_at", "2016-02-01 15:38:56.917309"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:38:56.918075"], ["updated_at", "2016-02-01 15:38:56.918075"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:38:56 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 224ms (Views: 218.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:39:09.281148"], ["updated_at", "2016-02-01 15:39:09.281148"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:39:09.282737"], ["updated_at", "2016-02-01 15:39:09.282737"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:39:09.283800"], ["updated_at", "2016-02-01 15:39:09.283800"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:39:09 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 210ms (Views: 203.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:40:28.108911"], ["updated_at", "2016-02-01 15:40:28.108911"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:40:28.110545"], ["updated_at", "2016-02-01 15:40:28.110545"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:40:28.111362"], ["updated_at", "2016-02-01 15:40:28.111362"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:40:28 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 203ms (Views: 197.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:40:28.331735"], ["updated_at", "2016-02-01 15:40:28.331735"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:40:28.333147"], ["updated_at", "2016-02-01 15:40:28.333147"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:40:28.334339"], ["updated_at", "2016-02-01 15:40:28.334339"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:40:28 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 09:40:28 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (10.1ms)
+  Rendered todo_items/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+Started POST "/todo_items" for 127.0.0.1 at 2016-02-01 09:40:28 -0600
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"2", "due_date(3i)"=>"1", "title"=>"Random", "description"=>"", "completed"=>"0"}, "commit"=>"Create Todo item"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "description", "completed", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Random"], ["description", ""], ["completed", "f"], ["due_date", "2016-02-01"], ["created_at", "2016-02-01 15:40:28.414032"], ["updated_at", "2016-02-01 15:40:28.414032"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/todo_items/7
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/todo_items/7" for 127.0.0.1 at 2016-02-01 09:40:28 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered todo_items/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."title" = ? LIMIT 1[0m  [["title", "Random"]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "todo_items"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:47:27.191928"], ["updated_at", "2016-02-01 15:47:27.191928"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:47:27.193554"], ["updated_at", "2016-02-01 15:47:27.193554"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:47:27.194309"], ["updated_at", "2016-02-01 15:47:27.194309"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 09:47:27 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (42.2ms)
+  Rendered todo_items/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 252ms (Views: 246.3ms | ActiveRecord: 0.0ms)
+Started POST "/todo_items" for 127.0.0.1 at 2016-02-01 09:47:27 -0600
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"2", "due_date(3i)"=>"1", "title"=>"some title", "description"=>"", "completed"=>"0"}, "commit"=>"Create Todo item"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "description", "completed", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "some title"], ["description", ""], ["completed", "f"], ["due_date", "2016-02-01"], ["created_at", "2016-02-01 15:47:27.459242"], ["updated_at", "2016-02-01 15:47:27.459242"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/todo_items
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:47:27 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:48:32.257866"], ["updated_at", "2016-02-01 15:48:32.257866"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:48:32.259793"], ["updated_at", "2016-02-01 15:48:32.259793"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:48:32.260670"], ["updated_at", "2016-02-01 15:48:32.260670"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:48:32 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 210ms (Views: 203.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:53:32.529061"], ["updated_at", "2016-02-01 15:53:32.529061"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:53:32.530682"], ["updated_at", "2016-02-01 15:53:32.530682"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:53:32.531756"], ["updated_at", "2016-02-01 15:53:32.531756"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 09:53:32 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (9.6ms)
+  Rendered todo_items/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 254ms (Views: 247.2ms | ActiveRecord: 0.0ms)
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+Started GET "/todo_items/4/edit" for 127.0.0.1 at 2016-02-01 09:53:32 -0600
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/_form.html.erb (3.5ms)
+  Rendered todo_items/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.952336"], ["updated_at", "2016-02-01 16:02:22.952336"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.954328"], ["updated_at", "2016-02-01 16:02:22.954328"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.955277"], ["updated_at", "2016-02-01 16:02:22.955277"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 0"], ["due_date", "2016-02-01"], ["description", "description 0"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.957786"], ["updated_at", "2016-02-01 16:02:22.957786"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "description 1"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.958779"], ["updated_at", "2016-02-01 16:02:22.958779"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-02-01"], ["description", "description 2"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.959781"], ["updated_at", "2016-02-01 16:02:22.959781"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-02-01"], ["description", "description 3"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.960571"], ["updated_at", "2016-02-01 16:02:22.960571"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 4"], ["due_date", "2016-02-01"], ["description", "description 4"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.961344"], ["updated_at", "2016-02-01 16:02:22.961344"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 5"], ["due_date", "2016-02-01"], ["description", "description 5"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.962131"], ["updated_at", "2016-02-01 16:02:22.962131"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 6"], ["due_date", "2016-02-01"], ["description", "description 6"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.962908"], ["updated_at", "2016-02-01 16:02:22.962908"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 7"], ["due_date", "2016-02-01"], ["description", "description 7"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.963697"], ["updated_at", "2016-02-01 16:02:22.963697"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 8"], ["due_date", "2016-02-01"], ["description", "description 8"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.964433"], ["updated_at", "2016-02-01 16:02:22.964433"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 9"], ["due_date", "2016-02-01"], ["description", "description 9"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.965122"], ["updated_at", "2016-02-01 16:02:22.965122"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 10"], ["due_date", "2016-02-01"], ["description", "description 10"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.965807"], ["updated_at", "2016-02-01 16:02:22.965807"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 11"], ["due_date", "2016-02-01"], ["description", "description 11"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.966544"], ["updated_at", "2016-02-01 16:02:22.966544"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 12"], ["due_date", "2016-02-01"], ["description", "description 12"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.967272"], ["updated_at", "2016-02-01 16:02:22.967272"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 13"], ["due_date", "2016-02-01"], ["description", "description 13"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.968020"], ["updated_at", "2016-02-01 16:02:22.968020"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 14"], ["due_date", "2016-02-01"], ["description", "description 14"], ["completed", "f"], ["created_at", "2016-02-01 16:02:22.968845"], ["updated_at", "2016-02-01 16:02:22.968845"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 15"], ["due_date", "2016-02-01"], ["description", "description 15"], ["completed", "t"], ["created_at", "2016-02-01 16:02:22.969796"], ["updated_at", "2016-02-01 16:02:22.969796"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:02:22 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 255ms (Views: 246.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.330001"], ["updated_at", "2016-02-01 16:02:54.330001"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.331525"], ["updated_at", "2016-02-01 16:02:54.331525"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.332728"], ["updated_at", "2016-02-01 16:02:54.332728"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 0"], ["due_date", "2016-02-01"], ["description", "description 0"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.335073"], ["updated_at", "2016-02-01 16:02:54.335073"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "description 1"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.336110"], ["updated_at", "2016-02-01 16:02:54.336110"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-02-01"], ["description", "description 2"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.337001"], ["updated_at", "2016-02-01 16:02:54.337001"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-02-01"], ["description", "description 3"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.337858"], ["updated_at", "2016-02-01 16:02:54.337858"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 4"], ["due_date", "2016-02-01"], ["description", "description 4"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.338672"], ["updated_at", "2016-02-01 16:02:54.338672"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 5"], ["due_date", "2016-02-01"], ["description", "description 5"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.339487"], ["updated_at", "2016-02-01 16:02:54.339487"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 6"], ["due_date", "2016-02-01"], ["description", "description 6"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.340525"], ["updated_at", "2016-02-01 16:02:54.340525"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 7"], ["due_date", "2016-02-01"], ["description", "description 7"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.341322"], ["updated_at", "2016-02-01 16:02:54.341322"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 8"], ["due_date", "2016-02-01"], ["description", "description 8"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.342092"], ["updated_at", "2016-02-01 16:02:54.342092"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 9"], ["due_date", "2016-02-01"], ["description", "description 9"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.342853"], ["updated_at", "2016-02-01 16:02:54.342853"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 10"], ["due_date", "2016-02-01"], ["description", "description 10"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.343611"], ["updated_at", "2016-02-01 16:02:54.343611"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 11"], ["due_date", "2016-02-01"], ["description", "description 11"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.344427"], ["updated_at", "2016-02-01 16:02:54.344427"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 12"], ["due_date", "2016-02-01"], ["description", "description 12"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.345191"], ["updated_at", "2016-02-01 16:02:54.345191"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 13"], ["due_date", "2016-02-01"], ["description", "description 13"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.345949"], ["updated_at", "2016-02-01 16:02:54.345949"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 14"], ["due_date", "2016-02-01"], ["description", "description 14"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.346823"], ["updated_at", "2016-02-01 16:02:54.346823"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 15"], ["due_date", "2016-02-01"], ["description", "description 15"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.347825"], ["updated_at", "2016-02-01 16:02:54.347825"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:02:54 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 254ms (Views: 245.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Task xyz"], ["due_date", "2016-02-01"], ["completed", "f"], ["created_at", "2016-02-01 16:02:54.612354"], ["updated_at", "2016-02-01 16:02:54.612354"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Task zyx"], ["due_date", "2016-02-02"], ["completed", "t"], ["created_at", "2016-02-01 16:02:54.613694"], ["updated_at", "2016-02-01 16:02:54.613694"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:02:54 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.117152"], ["updated_at", "2016-02-01 16:03:02.117152"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.118823"], ["updated_at", "2016-02-01 16:03:02.118823"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.119875"], ["updated_at", "2016-02-01 16:03:02.119875"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.125319"], ["updated_at", "2016-02-01 16:03:02.125319"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.126234"], ["updated_at", "2016-02-01 16:03:02.126234"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.126938"], ["updated_at", "2016-02-01 16:03:02.126938"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.130976"], ["updated_at", "2016-02-01 16:03:02.130976"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.132573"], ["updated_at", "2016-02-01 16:03:02.132573"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.133532"], ["updated_at", "2016-02-01 16:03:02.133532"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.137813"], ["updated_at", "2016-02-01 16:03:02.137813"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.138774"], ["updated_at", "2016-02-01 16:03:02.138774"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.139597"], ["updated_at", "2016-02-01 16:03:02.139597"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.144844"], ["updated_at", "2016-02-01 16:03:02.144844"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.145911"], ["updated_at", "2016-02-01 16:03:02.145911"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.146722"], ["updated_at", "2016-02-01 16:03:02.146722"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.151148"], ["updated_at", "2016-02-01 16:03:02.151148"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.152078"], ["updated_at", "2016-02-01 16:03:02.152078"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.152816"], ["updated_at", "2016-02-01 16:03:02.152816"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.156418"], ["updated_at", "2016-02-01 16:03:02.156418"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.157350"], ["updated_at", "2016-02-01 16:03:02.157350"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.158055"], ["updated_at", "2016-02-01 16:03:02.158055"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.161666"], ["updated_at", "2016-02-01 16:03:02.161666"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.162560"], ["updated_at", "2016-02-01 16:03:02.162560"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.163377"], ["updated_at", "2016-02-01 16:03:02.163377"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.168565"], ["updated_at", "2016-02-01 16:03:02.168565"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.169692"], ["updated_at", "2016-02-01 16:03:02.169692"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.170515"], ["updated_at", "2016-02-01 16:03:02.170515"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.174848"], ["updated_at", "2016-02-01 16:03:02.174848"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.175969"], ["updated_at", "2016-02-01 16:03:02.175969"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.176791"], ["updated_at", "2016-02-01 16:03:02.176791"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.181673"], ["updated_at", "2016-02-01 16:03:02.181673"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.182652"], ["updated_at", "2016-02-01 16:03:02.182652"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.183461"], ["updated_at", "2016-02-01 16:03:02.183461"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.0ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.187631"], ["updated_at", "2016-02-01 16:03:02.187631"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.188568"], ["updated_at", "2016-02-01 16:03:02.188568"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.189273"], ["updated_at", "2016-02-01 16:03:02.189273"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 248ms (Views: 239.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.447871"], ["updated_at", "2016-02-01 16:03:02.447871"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.448860"], ["updated_at", "2016-02-01 16:03:02.448860"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.449601"], ["updated_at", "2016-02-01 16:03:02.449601"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.461898"], ["updated_at", "2016-02-01 16:03:02.461898"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.463082"], ["updated_at", "2016-02-01 16:03:02.463082"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.464210"], ["updated_at", "2016-02-01 16:03:02.464210"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (10.3ms)
+  Rendered todo_items/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+Started POST "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"2", "due_date(3i)"=>"1", "title"=>"Random", "description"=>""}, "commit"=>"Create Todo item"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "description", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Random"], ["description", ""], ["due_date", "2016-02-01"], ["created_at", "2016-02-01 16:03:02.496936"], ["updated_at", "2016-02-01 16:03:02.496936"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/todo_items
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "t"]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."title" = ? LIMIT 1  [["title", "Random"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "todo_items"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.510379"], ["updated_at", "2016-02-01 16:03:02.510379"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.511337"], ["updated_at", "2016-02-01 16:03:02.511337"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.512130"], ["updated_at", "2016-02-01 16:03:02.512130"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_items/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started POST "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"2", "due_date(3i)"=>"1", "title"=>"some title", "description"=>""}, "commit"=>"Create Todo item"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "description", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "some title"], ["description", ""], ["due_date", "2016-02-01"], ["created_at", "2016-02-01 16:03:02.522618"], ["updated_at", "2016-02-01 16:03:02.522618"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/todo_items
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.5ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.587313"], ["updated_at", "2016-02-01 16:03:02.587313"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.588506"], ["updated_at", "2016-02-01 16:03:02.588506"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.589338"], ["updated_at", "2016-02-01 16:03:02.589338"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.598978"], ["updated_at", "2016-02-01 16:03:02.598978"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.599981"], ["updated_at", "2016-02-01 16:03:02.599981"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.600755"], ["updated_at", "2016-02-01 16:03:02.600755"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_items/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+Started GET "/todo_items/4/edit" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/_form.html.erb (4.1ms)
+  Rendered todo_items/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.623105"], ["updated_at", "2016-02-01 16:03:02.623105"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.624443"], ["updated_at", "2016-02-01 16:03:02.624443"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.625299"], ["updated_at", "2016-02-01 16:03:02.625299"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 0"], ["due_date", "2016-02-01"], ["description", "description 0"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.627424"], ["updated_at", "2016-02-01 16:03:02.627424"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "description 1"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.628295"], ["updated_at", "2016-02-01 16:03:02.628295"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 2"], ["due_date", "2016-02-01"], ["description", "description 2"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.629139"], ["updated_at", "2016-02-01 16:03:02.629139"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["due_date", "2016-02-01"], ["description", "description 3"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.629898"], ["updated_at", "2016-02-01 16:03:02.629898"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 4"], ["due_date", "2016-02-01"], ["description", "description 4"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.630701"], ["updated_at", "2016-02-01 16:03:02.630701"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 5"], ["due_date", "2016-02-01"], ["description", "description 5"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.631436"], ["updated_at", "2016-02-01 16:03:02.631436"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 6"], ["due_date", "2016-02-01"], ["description", "description 6"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.632215"], ["updated_at", "2016-02-01 16:03:02.632215"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 7"], ["due_date", "2016-02-01"], ["description", "description 7"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.632965"], ["updated_at", "2016-02-01 16:03:02.632965"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 8"], ["due_date", "2016-02-01"], ["description", "description 8"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.633758"], ["updated_at", "2016-02-01 16:03:02.633758"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 9"], ["due_date", "2016-02-01"], ["description", "description 9"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.634542"], ["updated_at", "2016-02-01 16:03:02.634542"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 10"], ["due_date", "2016-02-01"], ["description", "description 10"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.635325"], ["updated_at", "2016-02-01 16:03:02.635325"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 11"], ["due_date", "2016-02-01"], ["description", "description 11"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.636137"], ["updated_at", "2016-02-01 16:03:02.636137"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 12"], ["due_date", "2016-02-01"], ["description", "description 12"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.636925"], ["updated_at", "2016-02-01 16:03:02.636925"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 13"], ["due_date", "2016-02-01"], ["description", "description 13"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.637658"], ["updated_at", "2016-02-01 16:03:02.637658"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 14"], ["due_date", "2016-02-01"], ["description", "description 14"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.638401"], ["updated_at", "2016-02-01 16:03:02.638401"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 15"], ["due_date", "2016-02-01"], ["description", "description 15"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.639227"], ["updated_at", "2016-02-01 16:03:02.639227"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Task xyz"], ["due_date", "2016-02-01"], ["completed", "f"], ["created_at", "2016-02-01 16:03:02.648895"], ["updated_at", "2016-02-01 16:03:02.648895"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Task zyx"], ["due_date", "2016-02-02"], ["completed", "t"], ["created_at", "2016-02-01 16:03:02.649788"], ["updated_at", "2016-02-01 16:03:02.649788"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:03:02 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

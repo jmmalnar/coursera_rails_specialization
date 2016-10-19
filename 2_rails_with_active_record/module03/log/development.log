@@ -1,0 +1,552 @@
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (15.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTodoItems (20160201153423)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" text, "completed" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160201153423"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2016-02-01"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2016-02-01 15:37:46.540583"], ["updated_at", "2016-02-01 15:37:46.540583"]]
+  [1m[36m (17.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2016-01-30"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:37:46.562516"], ["updated_at", "2016-02-01 15:37:46.562516"]]
+  [1m[35m (16.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2016-01-29"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2016-02-01 15:37:46.582140"], ["updated_at", "2016-02-01 15:37:46.582140"]]
+  [1m[36m (16.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:38:18 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.1ms)
+Completed 200 OK in 13ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:38:27 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 951ms (Views: 949.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 09:38:28 -0600
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 09:38:28 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 09:38:28 -0600
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:39:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 338ms (Views: 329.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 09:39:35 -0600
+
+
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 09:39:42 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (19.3ms)
+  Rendered todo_items/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_items" for 127.0.0.1 at 2016-02-01 09:40:05 -0600
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ckeVeoQcjXs29S9mZr9N++vOHqN/x0Ge+iWfkDtdng/5gmuADdwITKfmvpI39bwAJGA7MzBscCEv/Qx4wC7Log==", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"2", "due_date(3i)"=>"1", "title"=>"Jason's test", "description"=>"Test todo item description", "completed"=>"0"}, "commit"=>"Create Todo item"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("title", "description", "completed", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Jason's test"], ["description", "Test todo item description"], ["completed", "f"], ["due_date", "2016-02-01"], ["created_at", "2016-02-01 15:40:05.075690"], ["updated_at", "2016-02-01 15:40:05.075690"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_items/4
+Completed 302 Found in 15ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/todo_items/4" for 127.0.0.1 at 2016-02-01 09:40:05 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2016-02-01 09:45:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (69.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.0.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.1ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:45:37 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.8ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 09:46:43 -0600
+
+
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 09:46:45 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (2.4ms)
+  Rendered todo_items/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_items" for 127.0.0.1 at 2016-02-01 09:46:57 -0600
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XKbUQFJm9NxsCqv9xl4uSd+h9CYVPt3wtklsWZTXOCPXYyq626Zx6/0ZOgmXFN+yEA/RtlqV7E9jkf+xb6Rtjg==", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"2", "due_date(3i)"=>"1", "title"=>"Test redirect", "description"=>"Testing redirect back to index.", "completed"=>"0"}, "commit"=>"Create Todo item"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_items" ("title", "description", "completed", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Test redirect"], ["description", "Testing redirect back to index."], ["completed", "f"], ["due_date", "2016-02-01"], ["created_at", "2016-02-01 15:46:57.999728"], ["updated_at", "2016-02-01 15:46:57.999728"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_items
+Completed 302 Found in 9ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:46:58 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 09:48:16 -0600
+
+
+Started GET "/todo_items/4" for 127.0.0.1 at 2016-02-01 09:48:21 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."id" DESC LIMIT 1[0m
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT  "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."id" DESC LIMIT 1
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 09:52:19 -0600
+
+
+Started GET "/todo_items/3" for 127.0.0.1 at 2016-02-01 09:52:22 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered todo_items/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items/3/edit" for 127.0.0.1 at 2016-02-01 09:52:23 -0600
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered todo_items/_form.html.erb (9.3ms)
+  Rendered todo_items/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items/3/edit" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered todo_items/_form.html.erb (3.4ms)
+  Rendered todo_items/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 09:53:00 -0600
+
+
+Started PATCH "/todo_items/3" for 127.0.0.1 at 2016-02-01 09:53:04 -0600
+Processing by TodoItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BeiOg8MS4H56DSBvKOSPSIkGjsEHgzSpMHalvAazE2COLXB5StJlSesesZt5rn6zRqirUUgoBRblrjZU/cBGzQ==", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"1", "due_date(3i)"=>"29", "title"=>"Task 3", "description"=>"learn Active Record TEST", "completed"=>"0"}, "commit"=>"Update Todo item", "id"=>"3"}
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "todo_items" SET "completed" = ?, "updated_at" = ? WHERE "todo_items"."id" = ?[0m  [["completed", "f"], ["updated_at", "2016-02-01 15:53:04.433009"], ["id", 3]]
+  [1m[35m (17.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_items/3
+Completed 302 Found in 23ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/todo_items/3" for 127.0.0.1 at 2016-02-01 09:53:04 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered todo_items/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:53:06 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items/5" for 127.0.0.1 at 2016-02-01 09:53:07 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered todo_items/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items/5/edit" for 127.0.0.1 at 2016-02-01 09:53:09 -0600
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered todo_items/_form.html.erb (4.7ms)
+  Rendered todo_items/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:53:13 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_items/new" for 127.0.0.1 at 2016-02-01 09:53:14 -0600
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (3.4ms)
+  Rendered todo_items/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 09:53:18 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items"[0m
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items"[0m
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:08 -0600
+
+
+Started GET "/todo_items/2" for 127.0.0.1 at 2016-02-01 10:01:22 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered todo_items/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items/2/edit" for 127.0.0.1 at 2016-02-01 10:01:24 -0600
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered todo_items/_form.html.erb (3.1ms)
+  Rendered todo_items/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/todo_items/2" for 127.0.0.1 at 2016-02-01 10:01:25 -0600
+Processing by TodoItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G1Z7fX2eWqBt5fgRGNQ7rAnI8aQ0yICUpi2hqCRrX/CQk4WH9F7fl/z2aeVJnspXxmbUNHtjsStz9TJA3xgKXQ==", "todo_item"=>{"due_date(1i)"=>"2016", "due_date(2i)"=>"1", "due_date(3i)"=>"30", "title"=>"Task 2", "description"=>"learn ruby TEST", "completed"=>"0"}, "commit"=>"Update Todo item", "id"=>"2"}
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "todo_items" SET "completed" = ?, "updated_at" = ? WHERE "todo_items"."id" = ?[0m  [["completed", "f"], ["updated_at", "2016-02-01 16:01:25.899034"], ["id", 2]]
+  [1m[35m (12.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_items/2
+Completed 302 Found in 17ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/todo_items/2" for 127.0.0.1 at 2016-02-01 10:01:25 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered todo_items/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:01:27 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items"
+  [1m[36mTodoItem Load (0.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items"
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:29 -0600
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "t"]]
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.self-84d3d5e6e4689d0090854ce8e7bfc61020d19234d2b2c65bf7d6b22b34362580.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-01 10:01:59 -0600
+
+
+Started GET "/todo_items/1" for 127.0.0.1 at 2016-02-01 10:02:02 -0600
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered todo_items/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2016-02-01 10:02:04 -0600
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.1ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms)
