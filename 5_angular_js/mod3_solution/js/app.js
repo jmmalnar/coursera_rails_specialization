@@ -1,7 +1,3 @@
-/**
- * Created by jmm5872 on 12/13/16.
- */
-
 (function() {
     'use strict';
 
@@ -61,7 +57,6 @@
         };
     }
 
-
     MenuSearchService.$inject = ['$http', 'ApiPath'];
     function MenuSearchService($http, ApiPath) {
         var service = this;
@@ -87,6 +82,5 @@
 
         };
     }
-
 
 })();
