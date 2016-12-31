@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+  <head>
+    <title>Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <a class="navbar-brand" ui-sref="home">Restaurant</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="home" ui-sref-active="activeTab">Home</a></li>
+          <li><a ui-sref="categories" ui-sref-active="activeTab">Categories</a></li>
+          <li><a ui-sref="items({short_name: 'SP'})" ui-sref-active="activeTab">Menu Items</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <ui-view></ui-view>
+   
+
+  <!-- Scripts -->
+  <script src="js/angular.js"></script>
+  <script src="js/ui-router.js"></script>
+
+  <!-- Angular modules -->
+  <script src="js/menuapp.module.js"></script>
+  <script src="js/data.module.js"></script>
+
+  <!-- Routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Angular services -->
+  <script src="js/menudata.service.js"></script>
+
+  <!-- Angular components -->
+  <script src="js/categories.component.js"></script>
+  <script src="js/items.component.js"></script>
+
+  <!-- Angular controllers -->
+  <script src="js/categories.controller.js"></script>
+  <script src="js/items.controller.js"></script>
+
+  
+</body>
+</html>
