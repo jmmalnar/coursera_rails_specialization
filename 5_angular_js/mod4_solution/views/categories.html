@@ -1,5 +1,7 @@
-<div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="category in $ctrl.menuCategories">
-        <button ui-sref="items({short_name: category.short_name})" class="btn btn-default button">{{category.name}}, ({{category.short_name}})</button>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="category in $ctrl.menuCategories">
+            <button ui-sref="items({short_name: category.short_name})" class="btn btn-default button">{{category.name}}, ({{category.short_name}})</button>
+        </div>
     </div>
 </div>
