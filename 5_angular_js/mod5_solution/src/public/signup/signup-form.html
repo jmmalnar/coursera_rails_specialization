@@ -55,12 +55,12 @@
     ng-model="$ctrl.user.phone"
     required
     name="phone"
-    pattern="(\d{3})-(\d{3})-(\d{2})-(\d{2})">
+    pattern="(\d{3})-(\d{3})-(\d{4})">
     <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" ng-if="signupForm.phone.$valid"></span>
     <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" ng-if="signupForm.phone.$invalid"></span>
   </div>
   <div class="col-sm-4" ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
-    Phone must be in the format ###-###-##-##
+    Phone must be in the format ###-###-####
   </div>
 </div>
 
